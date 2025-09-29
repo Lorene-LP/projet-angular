@@ -1,0 +1,66 @@
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: calc(100vh - 60px);
+  background: var(--main-bg);
+}
+
+.school-list-title {
+  text-align: center;
+  margin-bottom: 2em;
+  color: var(--text-dark);
+  background: var(--accent);
+  color: var(--text-light);
+  padding: 1em 1.5em;
+  border-radius: 12px;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2em auto;
+}
+
+/* Mobile (jusqu'à 480px) */
+@media (max-width: 480px) {
+  .home-content {
+    padding: 15px 10px;
+  }
+  
+  .school-list-title {
+    font-size: 1.1em;
+    padding: 0.8em 1em;
+    margin-bottom: 1.5em;
+    border-radius: 8px;
+  }
+}
+
+/* Tablette (481px à 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .home-content {
+    padding: 20px 15px;
+  }
+  
+  .school-list-title {
+    font-size: 1.2em;
+    padding: 0.9em 1.2em;
+    margin-bottom: 1.8em;
+  }
+}
+
+/* Desktop (769px et plus) */
+@media (min-width: 769px) {
+  .home-content {
+    padding: 30px 20px;
+  }
+  
+  .school-list-title {
+    font-size: 1.4em;
+    padding: 1em 1.5em;
+    margin-bottom: 2em;
+  }
+}

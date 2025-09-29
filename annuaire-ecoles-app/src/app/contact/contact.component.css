@@ -1,0 +1,336 @@
+.contact-container {
+  min-height: calc(100vh - 120px);
+  padding: 80px 20px 40px;
+  background: var(--main-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.back-btn {
+  background: var(--tertiary);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: var(--secondary);
+}
+
+.contact-title {
+  color: var(--text-dark);
+  margin: 0 0 20px 0;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.school-info {
+  background: var(--accent);
+  color: var(--text-light);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.school-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3em;
+}
+
+.school-info p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.contact-form {
+  background: var(--accent);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  color: var(--text-light);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-light);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1em;
+  background: var(--main-bg);
+  color: var(--text-dark);
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--tertiary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.cgu-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 0.95em;
+}
+
+.cgu-row input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cgu-row label {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cgu-row a {
+  color: var(--text-light);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cgu-row a:hover {
+  color: var(--tertiary);
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.submit-btn {
+  background: var(--tertiary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  padding: 15px 40px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-message {
+  margin-top: 20px;
+  padding: 15px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Mobile (jusqu'à 480px) */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 20px 10px 40px;
+    min-height: calc(100vh - 60px);
+  }
+  
+  .contact-header {
+    margin-bottom: 30px;
+  }
+  
+  .back-btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+  
+  .contact-title {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+  }
+  
+  .school-info {
+    padding: 15px;
+    margin-top: 15px;
+  }
+  
+  .school-info h3 {
+    font-size: 1.1em;
+  }
+  
+  .contact-form {
+    padding: 25px 15px;
+    border-radius: 8px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 0.95em;
+    margin-bottom: 6px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 0.95em;
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
+  }
+  
+  .cgu-row {
+    margin: 15px 0;
+    font-size: 0.9em;
+  }
+  
+  .submit-btn {
+    padding: 12px 30px;
+    font-size: 1em;
+    min-width: 120px;
+  }
+}
+
+/* Tablette (481px à 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact-container {
+    padding: 30px 20px 40px;
+  }
+  
+  .contact-header {
+    margin-bottom: 35px;
+  }
+  
+  .contact-title {
+    font-size: 1.7em;
+    margin-bottom: 18px;
+  }
+  
+  .school-info {
+    padding: 18px;
+    margin-top: 18px;
+  }
+  
+  .contact-form {
+    padding: 35px 25px;
+    border-radius: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 18px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 11px;
+  }
+  
+  .form-group textarea {
+    min-height: 110px;
+  }
+  
+  .cgu-row {
+    margin: 18px 0;
+    font-size: 0.95em;
+  }
+  
+  .submit-btn {
+    padding: 14px 35px;
+    font-size: 1.05em;
+  }
+}
+
+/* Desktop (769px et plus) */
+@media (min-width: 769px) {
+  .contact-container {
+    padding: 40px 30px 40px;
+  }
+  
+  .contact-header {
+    margin-bottom: 40px;
+  }
+  
+  .contact-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .school-info {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .contact-form {
+    padding: 40px;
+    border-radius: 12px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+  }
+  
+  .form-group textarea {
+    min-height: 120px;
+  }
+  
+  .cgu-row {
+    margin: 20px 0;
+    font-size: 0.95em;
+  }
+  
+  .submit-btn {
+    padding: 15px 40px;
+    font-size: 1.1em;
+  }
+}

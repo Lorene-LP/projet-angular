@@ -1,0 +1,77 @@
+<div class="contact-container">
+  <div class="contact-header">
+    <button class="back-btn" (click)="goBack()">← Retour</button>
+    <h2 class="contact-title">Contacter l'établissement</h2>
+    <div *ngIf="school" class="school-info">
+      <h3>{{ school.nom_etablissement }}</h3>
+      <p>{{ school.adresse }}, {{ school.code_postal }} {{ school.commune }}</p>
+    </div>
+  </div>
+
+  <form class="contact-form" (ngSubmit)="onSubmit()" #contactFormRef="ngForm">
+    <div class="form-group">
+      <label for="nom">Nom et prénom :</label>
+      <input 
+        type="text" 
+        id="nom" 
+        name="nom" 
+        [(ngModel)]="contactForm.nom"
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Adresse e-mail :</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        [(ngModel)]="contactForm.email"
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="objet">Objet :</label>
+      <input 
+        type="text" 
+        id="objet" 
+        name="objet" 
+        [(ngModel)]="contactForm.objet"
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Votre message :</label>
+      <textarea 
+        id="message" 
+        name="message" 
+        rows="5" 
+        [(ngModel)]="contactForm.message"
+        required></textarea>
+    </div>
+
+    <div class="cgu-row">
+      <input 
+        type="checkbox" 
+        id="cgu" 
+        name="cgu" 
+        [(ngModel)]="contactForm.cgu"
+        required>
+      <label for="cgu">
+        J'accepte les <a href="#" tabindex="-1">conditions générales d'utilisation</a>
+      </label>
+    </div>
+
+    <div class="form-actions">
+      <button 
+        type="submit" 
+        [disabled]="!contactFormRef.form.valid || isSubmitting"
+        class="submit-btn">
+        {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer' }}
+      </button>
+    </div>
+
+    <div *ngIf="submitMessage" class="submit-message">
+      {{ submitMessage }}
+    </div>
+  </form>
+</div>

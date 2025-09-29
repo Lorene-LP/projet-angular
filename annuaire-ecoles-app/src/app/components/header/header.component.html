@@ -1,0 +1,25 @@
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <a routerLink="/" (click)="closeMenu()">
+        <h1>Annuaire d'Établissements Scolaires</h1>
+      </a>
+    </div>
+    
+    <nav class="nav" [class.nav-open]="isMenuOpen">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a routerLink="/" (click)="closeMenu()" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Accueil
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle" (click)="toggleMenu()" [class.menu-open]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

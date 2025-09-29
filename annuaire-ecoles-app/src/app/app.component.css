@@ -1,0 +1,11 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.main-content {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  min-height: calc(100vh - 100px);
+  background: var(--main-bg);
+}

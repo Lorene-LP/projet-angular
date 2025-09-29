@@ -1,0 +1,26 @@
+<div class="map-wrapper">
+  <div #mapContainer class="map-container" id="map-container">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--text-dark); font-size: 14px;">
+      Chargement de la carte...
+    </div>
+  </div>
+  <!-- Panneau d'infos détaillées -->
+  <div
+    #sideDetail
+    class="school-detail-popup"
+    *ngIf="selectedSchool"
+  >
+    <strong>{{selectedSchool!.nom_etablissement}}</strong><br>
+    {{selectedSchool!.commune}} ({{selectedSchool!.code_postal}})<br>
+    <span *ngIf="selectedSchool!.statut && selectedSchool!.statut.trim() !== ''">
+      Statut : {{selectedSchool!.statut}}<br>
+    </span>
+    Type : {{selectedSchool!.type_etablissement}}<br>
+    <div class="button-group">
+      <button class="contact-btn" (click)="contactSchool(selectedSchool!.id)">Contact</button>
+      <button class="close-btn" (click)="closeDetail()">Fermer</button>
+    </div>
+  </div>
+</div>
+<!-- Popup de survol -->
+<div #popup class="ol-popup" style="display:none; position:absolute;"></div>

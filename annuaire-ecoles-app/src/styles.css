@@ -1,0 +1,153 @@
+:root {
+  --main-bg: #f6ead4;
+  --accent: #b4a284;
+  --secondary: #a2a595;
+  --tertiary: #8d7b5c;
+  --text-dark: #2d2d2d;
+  --text-light: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: var(--main-bg);
+}
+
+body {
+  padding-top: 60px;
+}
+
+.main-content {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Styles pour les boutons généraux */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Styles pour les liens */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Styles pour les inputs */
+input, textarea, select {
+  font-family: inherit;
+}
+
+/* Responsive design - Breakpoints */
+
+:root {
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-large: 1200px;
+}
+
+/* Mobile (jusqu'à 480px) */
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px;
+    font-size: 14px;
+  }
+  
+  .main-content {
+    min-height: calc(100vh - 60px);
+  }
+}
+
+/* Tablette (481px à 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    padding-top: 60px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop (769px à 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    padding-top: 60px;
+    font-size: 16px;
+  }
+}
+
+/* Large Desktop (1025px et plus) */
+@media (min-width: 1025px) {
+  body {
+    padding-top: 60px;
+    font-size: 16px;
+  }
+}
+
+/* Styles pour éviter les débordements */
+* {
+  box-sizing: border-box;
+}
+
+/* Gestion des débordements de texte */
+h1, h2, h3, h4, h5, h6, p, span, div {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Gestion des images responsives */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Gestion des tableaux responsives */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Gestion des débordements horizontaux */
+body {
+  overflow-x: hidden;
+}
+
+/* Amélioration de la lisibilité sur mobile */
+@media (max-width: 480px) {
+  button, a, input[type="button"], input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .form-group {
+    margin-bottom: 1.2em;
+  }
+  
+  p, span, div {
+    line-height: 1.5;
+  }
+}
+
+/* Gestion des orientations paysage sur mobile/tablette */
+@media (max-width: 768px) and (orientation: landscape) {
+  .map-container {
+    height: 250px;
+  }
+  
+  .contact-container {
+    padding: 20px 10px 20px;
+  }
+  
+  .home-content {
+    padding: 15px 10px;
+  }
+}
