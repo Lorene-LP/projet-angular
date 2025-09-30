@@ -1,0 +1,12 @@
+[build]
+  # Commande pour construire votre projet
+  command = "npm run build"
+  
+  # Dossier à publier (celui généré par ng build)
+  publish = "dist/annuaire-ecoles-app/browser"
+
+# Configuration pour les SPA (Single Page Applications)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

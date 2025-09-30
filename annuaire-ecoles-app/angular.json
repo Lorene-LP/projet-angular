@@ -16,10 +16,17 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "baseHref": "/",
+            "outputPath": "dist/annuaire-ecoles-app",
+            "index": "src/index.html",
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "_redirects",
+                "input": "./",
+                "output": "./"
               }
             ],
             "styles": [
