@@ -13,4 +13,4 @@ Développer une application **front-end Angular** permettant aux utilisateurs de
 ## 🚀 Installation
 1. Cloner ce dépôt  
    ```bash
-   git clone https://github.com/TonPseudo/projet-angular.git
+   git clone https://github.com/Lorene-LP/projet-angular.git
